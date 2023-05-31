@@ -1,0 +1,112 @@
+class Produto:
+    def __init__(self, nome, valor, quantidade):
+        self.nome = nome
+        self.valor = valor
+        self.quantidade = quantidade
+        
+        
+    def cd_ruim(self):
+        print("O cd foi será destruido")
+        
+        
+    def cd_bom(self):
+        print("O cd será adicionado na loja")
+        
+        
+        
+    def livro_rasgado(self):
+        print("O livro encontra-se rasgado")
+        
+        
+    def livro_bom(self):
+        print("O livro será adicionado a loja")    
+        
+        
+        
+class Dvd(Produto):
+    def __init__(self, nome, valor, quantidade):
+        super().__init__(nome, valor, quantidade)
+        
+    def dvd_arranhado(self):
+        print("O dvd será destruido")
+        
+        
+    def dvd_bom(self):
+        print("O dvd será adicionado a loja")        
+        
+
+    
+class Livro(Produto):
+    def __init__(self, nome, valor, quantidade):
+        super().__init__(nome, valor, quantidade)
+        
+    def livro_rasgado(self):
+        print("O livro encontra-se rasgado")
+        
+        
+    def livro_bom(self):
+        print("O livro será adicionado a loja")
+        
+
+class Cd(Produto):
+    def __init__(self, nome, valor, quantidade):
+        super().__init__(nome, valor, quantidade)
+        
+    def cd_ruim(self):
+        print("O cd foi será destruido")
+        
+        
+    def cd_bom(self):
+        print("O cd será adicionado na loja")
+
+
+        
+def mostrar_menu():
+    print("Escolha uma opção:")
+    print("1. Produto CD")
+    print("2. Produto LIVRO")
+    print("3. Produto DVD") 
+mostrar_menu()
+opcao = input("Opção selecionada: ")
+
+
+
+if opcao == "1":
+    nome = str(input("Digite o nome do CD:"))
+    valor = int(input("Digite o valor do CD:"))
+    quantidade = int(input("Digite a quantidade:"))
+    
+    
+    
+    
+elif opcao == "2":
+    nome = str(input("Digite o nome do Livro:"))
+    valor = float(input("Digite o valor do Livro:"))
+    quantidade = int(input("Digite a quantidade:"))
+    
+elif opcao == "3":
+    nome = str(input("Digite o nome do DVD:"))
+    valor = float(input("Digite o valor do DVD:"))
+    quantidade = int(input("Digite a quantidade:"))
+    
+else:
+    print("Opção invalida")
+    
+   
+cd = Cd(nome, valor, quantidade) 
+print(cd.nome, cd.valor, cd.quantidade)
+cd.cd_bom()
+cd.cd_ruim()
+
+
+lv = Livro(nome, valor, quantidade) 
+print(lv.nome, lv.valor, lv.quantidade)
+lv.livro_rasgado()
+lv.livro_bom()        
+    
+
+dv = Dvd(nome, valor, quantidade) 
+print(dv.nome, dv.valor, dv.quantidade)
+dv.dvd_arranhado()
+dv.dvd_bom()        
+    
