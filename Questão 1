@@ -1,0 +1,22 @@
+opcao = 'S'
+cadastro = {}
+cadastro_sem_menor = {}
+
+while opcao =='S':
+    nome = input("Digite o nome:  ")
+    cpf = input("Digite o cpf:  ")
+    idade = int(input("Digite a idade:  "))
+    
+    cadastro[nome] = {'cpf':cpf, 'idade':idade}
+    
+    opcao = input("Deseja continuar? [S/N] ").upper()
+    if opcao == 'N':
+        break
+
+for chave, valor in cadastro.items():
+    if valor['idade'] > 18:
+        cadastro_sem_menor[chave] = valor
+        
+        
+    print(cadastro)
+    print(cadastro_sem_menor)
