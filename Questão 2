@@ -1,0 +1,19 @@
+dicionario_principal = {}
+dicionario_backup = {}
+opcao = 'S'
+ 
+while opcao =='S':
+    nome = input("Digite o nome:  ")
+    idade = int(input("Digite a idade:  "))
+    
+    dicionario_principal[nome] = idade
+    dicionario_backup[nome] = idade
+    if len(dicionario_principal) == 2:
+        print(dicionario_principal)
+        dicionario_principal = {}
+    print(dicionario_principal)
+    print(dicionario_backup)
+    opcao = input("Deseja continuar? [S/N] ").upper()
+    if opcao == 'N':
+        break
+    
