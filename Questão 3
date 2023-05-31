@@ -1,0 +1,76 @@
+class Automovel():
+    def __init__(self, modelo, marca):
+        self.modelo = modelo
+        self.marca = marca
+        
+    def andando(self, modelo):
+        print("Automovel em movimento.")
+            
+    def parado(self, modelo):
+        print("Automovel parado.")    
+        
+  
+class Carro(Automovel):
+    def __init__(self, modelo, marca):
+        super().__init__(modelo, marca)
+        
+        
+    def andando(self):
+        print("Carro com velocidade de 30km.")
+        
+    def parado(self):
+        print("Carro sem porta.")
+        
+        
+        
+class Caminhao(Automovel):
+    def __init__(self, modelo, marca):
+        super().__init__(modelo, marca)
+        
+        
+    def andando(self):
+        print("Caminhão com velocidade de 20km.")
+        
+    def parado(self):
+        print("Caminhão sem roda.")    
+        
+class Caminhonete(Automovel):
+    def __init__(self, modelo, marca):
+        super().__init__(modelo, marca)
+        
+        
+    def andando(self):
+        print("Caminhonete em movimento 50km.")
+        
+    def parado(self):
+        print("Caminhonete com defeito.")    
+   
+class Moto(Automovel):
+    def __init__(self, modelo, marca):
+        super().__init__(modelo, marca)
+        
+        
+    def andando(self):
+        print("Moto em alta velocidade.")
+        
+    def parado(self):
+        print("Moto sem freio.")  
+        
+
+
+carro = Carro("Hyundai ","i30" )
+print(carro.modelo, carro.marca)
+carro.andando()
+
+caminhao = Caminhao("Volvo","FH 460" )
+print(caminhao.modelo, caminhao.marca)
+caminhao.andando()
+
+
+caminhonete = Caminhonete("Ford","Ranger Limited" )
+print(caminhonete.modelo, caminhonete.marca)
+caminhonete.andando()
+
+moto = Moto("PCX","YAMAHA" )
+print(moto.modelo, moto.marca)
+moto.andando()
